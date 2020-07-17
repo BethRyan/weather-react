@@ -1,38 +1,42 @@
 .App {
+  font-family: sans-serif;
   text-align: center;
+  border: solid 2px lightgray;
+  border-radius: 15px;
+  background: #7fdbda;
+  max-width: 500px;
+  margin: 0 auto;
+  box-shadow: rgba(62, 114, 139, 0.51) 0px 2px 4px 0;
+  color: #8566aa;
+  text-shadow: rgba(62, 114, 139, 0.51) 2px 2px 3px;
+}
+.ResultWeather {
+  text-transform: capitalize;
+}
+.SearchEngine {
+  text-transform: capitalize;
+}
+#search-btn {
+  box-shadow: rgba(62, 114, 139, 0.51) 0px 2px 4px 0;
+  padding: 4px;
+  font-size: 20px;
+  background: #f4f4f4;
+  color: #8566aa;
+}
+#search-btn:hover {
+  background: #8566aa;
+  color: #fff1eb;
+  cursor: pointer;
+  text-shadow: 2px 2px 3px black;
+}
+#search-bar {
+  box-shadow: rgba(62, 114, 139, 0.51) 0px 2px 4px 0;
+  padding: 4px;
+  font-size: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#list {
+  text-align: left;
+  list-style-position: inside;
+  margin: 30px;
 }
