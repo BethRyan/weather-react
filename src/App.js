@@ -5,9 +5,10 @@ import SearchEngine from "./SearchEngine";
 function App() {
   return (
     <div className="App">
-      <h1>Weather App</h1>
-
-      <SearchEngine />
+      <container>
+        <h1>Weather App</h1>
+        <SearchEngine />
+      </container>
     </div>
   );
 }

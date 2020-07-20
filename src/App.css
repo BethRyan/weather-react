@@ -41,5 +41,17 @@ li {
 #list {
   text-align: left;
   list-style-position: inside;
-  margin: 30px;
+  margin: 10px;
+  padding: 0;
+}
+#current-stats-col {
+  padding: 0;
+}
+#icon-col {
+  padding: 0;
+}
+#current-temp {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 15px;
 }

@@ -24,6 +24,7 @@ export default function SearchEngine() {
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
       icon: response.data.weather[0].icon,
+      feelsLike: response.data.main.feels_like,
     });
     console.log(response.data);
   }
@@ -49,6 +50,7 @@ export default function SearchEngine() {
         humidity={info.humidity}
         description={info.description}
         icon={info.icon}
+        feelsLike={info.feelsLike}
       />
     </div>
   );
