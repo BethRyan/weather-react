@@ -9,7 +9,7 @@ export default function Forecast(props) {
     <div className="Forecast">
       <hr class="my-3" />
       <h2>Hourly Forecast</h2>
-      <Container>
+      <Container className="Forecast">
         <Row>
           <Col>
             <Icons icon="CLEAR_DAY" />
