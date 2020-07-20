@@ -9,7 +9,7 @@ function App() {
         <h1>Weather App</h1>
         <SearchEngine />
         <footer id="footer">
-          Open-source code by
+          Open-source code by{" "}
           <a
             href="https://www.linkedin.com/in/elizabeth-waylett-6ab21274/"
             target="_blank"
@@ -18,7 +18,7 @@ function App() {
           >
             Beth Waylett Ryan
           </a>
-          🐳 on
+          🐳 on{" "}
           <a
             href="https://github.com/BethRyan"
             target="_blank"
@@ -27,7 +27,7 @@ function App() {
           >
             GitHub
           </a>
-          and hosted on
+          and hosted on{" "}
           <a
             href="https://app.netlify.com/"
             target="_blank"
