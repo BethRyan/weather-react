@@ -6,7 +6,6 @@ function App() {
   return (
     <div className="App">
       <container>
-        <h1>Weather App</h1>
         <SearchEngine />
         <footer id="footer">
           Open-source code by{" "}

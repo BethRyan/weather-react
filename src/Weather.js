@@ -14,17 +14,28 @@ export default function Weather(props) {
     return (
       <div className="Weather">
         <hr class="my-3" />
-        <h2>The weather in {city}:</h2>
+        <h2>Currently in {city}:</h2>
         <Container>
           <Row>
             <Col id="icon-col">
-              <img min-width="100px" id="icon" src={icon} alt="weather icon" />
-              <p id="current-temp">Currently: {Math.round(temp)}°F | °C</p>
+              <div className="clearfix">
+                <img
+                  min-width="100px"
+                  id="icon"
+                  src={icon}
+                  alt="weather icon"
+                  className="float-left"
+                />
+                <div className="float-left">
+                  <span id="current-temp">{Math.round(temp)}</span>
+                  <span id="units">°F | °C</span>
+                </div>
+              </div>
             </Col>
             <Col id="current-stats-col">
               <ul id="list">
                 <li>Feels Like: {Math.round(temp)}°F | °C</li>
-                <li>Description: {description}</li>
+
                 <li>Humidity: {humidity}%</li>
                 <li>Wind: {Math.round(wind)}mph</li>
               </ul>
