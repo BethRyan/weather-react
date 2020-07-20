@@ -30,7 +30,6 @@ export default function Weather(props) {
               </ul>
             </Col>
           </Row>
-          <hr class="my-3" />
         </Container>
       </div>
     );

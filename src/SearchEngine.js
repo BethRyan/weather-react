@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Weather from "./Weather";
+import Forecast from "./Forecast";
 import axios from "axios";
 
 export default function SearchEngine() {
@@ -14,6 +15,8 @@ export default function SearchEngine() {
     event.preventDefault();
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=419fb4560d921e7e18ca1ed3261fc38f&units=imperial`;
     axios.get(url).then(weatherInformation);
+    //url = `https://api.openweathermap.org/data/2.5/forecast?q=${city.value}&appid=${apiKey}&units=imperial`;
+    //axios.get(url).then(displayForecast);
   }
 
   function weatherInformation(response) {
@@ -42,7 +45,6 @@ export default function SearchEngine() {
         />
         <input id="search-btn" type="submit" value="Search" />
       </form>
-
       <Weather
         cityName={info.name}
         temp={info.temp}
@@ -52,6 +54,7 @@ export default function SearchEngine() {
         icon={info.icon}
         feelsLike={info.feelsLike}
       />
+      <Forecast />
     </div>
   );
 }
