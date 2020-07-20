@@ -13,7 +13,6 @@ export default function Weather(props) {
   if (temp) {
     return (
       <div className="Weather">
-        <hr class="my-3" />
         <h2>Currently in {city}:</h2>
         <Container>
           <Row>
