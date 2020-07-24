@@ -23,6 +23,9 @@
 li {
   list-style-type: none;
 }
+.Loader {
+  margin: 150px 80px;
+}
 #search-btn {
   box-shadow: rgba(62, 114, 139, 0.51) 0px 2px 4px 0;
 

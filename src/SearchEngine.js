@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import Weather from "./Weather";
 import Forecast from "./Forecast";
 import axios from "axios";
+import Loading from "./Loading";
 
 export default function SearchEngine() {
+  let [loaded, setLoaded] = useState(false);
   let [city, setCity] = useState("");
   let [info, setInfo] = useState({});
 
@@ -20,6 +22,7 @@ export default function SearchEngine() {
   }
 
   function weatherInformation(response) {
+    setLoaded(true);
     setInfo({
       name: response.data.name,
       temp: response.data.main.temp,
@@ -32,29 +35,37 @@ export default function SearchEngine() {
     console.log(response.data);
   }
 
-  return (
-    <div className="SearchEngine">
-      <form onSubmit={handleSubmit}>
-        <input
-          id="search-bar"
-          type="search"
-          placeholder="Search new city"
-          autoFocus="on"
-          autoComplete="off"
-          onChange={updateCity}
+  if (loaded) {
+    return (
+      <div className="SearchEngine">
+        <form onSubmit={handleSubmit}>
+          <input
+            id="search-bar"
+            type="search"
+            placeholder="Search new city"
+            autoFocus="on"
+            autoComplete="off"
+            onChange={updateCity}
+          />
+          <input id="search-btn" type="submit" value="Search" />
+        </form>
+        <Weather
+          cityName={info.name}
+          temp={info.temp}
+          wind={info.wind}
+          humidity={info.humidity}
+          description={info.description}
+          icon={info.icon}
+          feelsLike={info.feelsLike}
         />
-        <input id="search-btn" type="submit" value="Search" />
-      </form>
-      <Weather
-        cityName={info.name}
-        temp={info.temp}
-        wind={info.wind}
-        humidity={info.humidity}
-        description={info.description}
-        icon={info.icon}
-        feelsLike={info.feelsLike}
-      />
-      <Forecast />
-    </div>
-  );
+        <Forecast />
+      </div>
+    );
+  } else {
+    let defaultCity = "New York";
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${defaultCity}&appid=419fb4560d921e7e18ca1ed3261fc38f&units=imperial`;
+    axios.get(url).then(weatherInformation);
+
+    return <Loading />;
+  }
 }
