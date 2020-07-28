@@ -7,7 +7,7 @@ import Icons from "./Icons";
 export default function Forecast(props) {
   return (
     <div className="Forecast">
-      <hr class="my-3" />
+      <hr className="my-3" />
       <h2>Hourly Forecast</h2>
       <Container className="Forecast">
         <Row>

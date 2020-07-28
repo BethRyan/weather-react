@@ -4,10 +4,11 @@ import Forecast from "./Forecast";
 import axios from "axios";
 import Loading from "./Loading";
 
+import { renderIntoDocument } from "react-dom/test-utils";
+
 export default function SearchEngine() {
-  let [loaded, setLoaded] = useState(false);
   let [city, setCity] = useState("");
-  let [info, setInfo] = useState({});
+  let [info, setInfo] = useState({ loaded: false });
 
   function updateCity(event) {
     setCity(event.target.value);
@@ -22,7 +23,6 @@ export default function SearchEngine() {
   }
 
   function weatherInformation(response) {
-    setLoaded(true);
     setInfo({
       name: response.data.name,
       temp: response.data.main.temp,
@@ -31,11 +31,13 @@ export default function SearchEngine() {
       humidity: response.data.main.humidity,
       icon: response.data.weather[0].icon,
       feelsLike: response.data.main.feels_like,
+      date: new Date(response.data.dt * 1000),
+      loaded: true,
     });
-    console.log(response.data);
+    //console.log(response.data);
   }
 
-  if (loaded) {
+  if (info.loaded) {
     return (
       <div className="SearchEngine">
         <form onSubmit={handleSubmit}>
@@ -49,15 +51,7 @@ export default function SearchEngine() {
           />
           <input id="search-btn" type="submit" value="Search" />
         </form>
-        <Weather
-          cityName={info.name}
-          temp={info.temp}
-          wind={info.wind}
-          humidity={info.humidity}
-          description={info.description}
-          icon={info.icon}
-          feelsLike={info.feelsLike}
-        />
+        <Weather info={info} />
         <Forecast />
       </div>
     );

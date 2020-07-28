@@ -8,7 +8,7 @@ export default function Icons(props) {
         icon={props.icon}
         color="#3b2e5a"
         size={40}
-        animate="true"
+        animate={true}
       />
     </div>
   );

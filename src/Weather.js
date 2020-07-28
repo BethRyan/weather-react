@@ -2,18 +2,20 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Date from "./Date";
 
 export default function Weather(props) {
-  let city = props.cityName;
-  let temp = props.temp;
-  let description = props.description;
-  let wind = props.wind;
-  let humidity = props.humidity;
-  let icon = `https://openweathermap.org/img/wn/${props.icon}@2x.png`;
+  let city = props.info.name;
+  let temp = props.info.temp;
+  //let description = props.description;
+  let wind = props.info.wind;
+  let humidity = props.info.humidity;
+  let icon = `https://openweathermap.org/img/wn/${props.info.icon}@2x.png`;
 
   return (
     <div className="Weather">
-      <h2>Currently in {city}:</h2>
+      <h2>{city}:</h2>
+      <Date date={props.info.date} />
       <Container>
         <Row>
           <Col id="icon-col">

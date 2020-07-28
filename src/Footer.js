@@ -7,7 +7,7 @@ export default function Footer() {
       <a
         href="https://www.linkedin.com/in/elizabeth-waylett-6ab21274/"
         target="_blank"
-        class="footerLink"
+        className="footerLink"
         rel="noopener noreferrer"
       >
         Beth Waylett Ryan
@@ -16,7 +16,7 @@ export default function Footer() {
       <a
         href="https://github.com/BethRyan"
         target="_blank"
-        class="footerLink"
+        className="footerLink"
         rel="noopener noreferrer"
       >
         GitHub
@@ -26,7 +26,7 @@ export default function Footer() {
         href="https://app.netlify.com/"
         target="_blank"
         rel="noopener noreferrer"
-        class="footerLink"
+        className="footerLink"
       >
         Netlify
       </a>
