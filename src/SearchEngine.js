@@ -3,7 +3,6 @@ import Weather from "./Weather";
 import Forecast from "./Forecast";
 import axios from "axios";
 import Loading from "./Loading";
-
 import { renderIntoDocument } from "react-dom/test-utils";
 
 export default function SearchEngine() {

@@ -24,7 +24,7 @@ export default function Date(props) {
   //THE RENDERING:
   return (
     <div className="localTime">
-      {day} {time}
+      Updated: {day} {time}
     </div>
   );
 }
