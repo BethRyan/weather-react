@@ -15,9 +15,7 @@ export default function Weather(props) {
   return (
     <div className="Weather">
       <h2>{city}:</h2>
-      <div className="UpdatedTime">
-        <Date date={props.info.date} />
-      </div>
+
       <Container>
         <Row>
           <Col id="current-icon-col">
@@ -39,6 +37,9 @@ export default function Weather(props) {
             </ul>
           </Col>
         </Row>
+        <div className="UpdatedTime">
+          <Date date={props.info.date} />
+        </div>
       </Container>
     </div>
   );

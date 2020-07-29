@@ -8,7 +8,7 @@ export default function Forecast(props) {
   return (
     <div className="Forecast">
       <hr className="my-3" />
-      <h2>Hourly Forecast</h2>
+      <h2>Hourly Forecast:</h2>
       <Container className="Forecast">
         <Row>
           <Col>
