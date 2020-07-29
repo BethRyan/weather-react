@@ -6,8 +6,8 @@ import Loading from "./Loading";
 import { renderIntoDocument } from "react-dom/test-utils";
 
 export default function SearchEngine() {
-  let [city, setCity] = useState("");
-  let [info, setInfo] = useState({ loaded: false });
+  const [city, setCity] = useState("");
+  const [info, setInfo] = useState({ loaded: false });
 
   function updateCity(event) {
     setCity(event.target.value);
@@ -33,7 +33,6 @@ export default function SearchEngine() {
       date: new Date(response.data.dt * 1000),
       loaded: true,
     });
-    //console.log(response.data);
   }
 
   if (info.loaded) {
