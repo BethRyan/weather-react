@@ -30,6 +30,13 @@ export default function Footer() {
       >
         Netlify
       </a>
+      <br />
+      <a
+        href="https://www.freepik.com/vectors/background"
+        className="backgroundCredit"
+      >
+        Background vector created by kjpargeter - www.freepik.com
+      </a>
     </footer>
   );
 }
