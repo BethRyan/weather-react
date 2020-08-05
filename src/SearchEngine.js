@@ -50,7 +50,7 @@ export default function SearchEngine() {
           <input id="search-btn" type="submit" value="Search" />
         </form>
         <Weather info={info} />
-        <Forecast />
+        <Forecast city={info.name} />
       </div>
     );
   } else {
