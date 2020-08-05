@@ -4,6 +4,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Date from "./Date";
 import Icons from "./Icons";
+import CurrentTempurature from "./CurrentTempurature";
 
 export default function Weather(props) {
   let city = props.info.name;
@@ -24,8 +25,10 @@ export default function Weather(props) {
                 <Icons code={icon} />
               </div>
               <div className="float-left">
-                <span id="current-temp">{Math.round(temp)}</span>
-                <span id="units">°F | °C</span>
+                <CurrentTempurature
+                  far={Math.round(temp)}
+                  cel={Math.round(((temp - 32) * 5) / 9)}
+                />
               </div>
             </div>
           </Col>
