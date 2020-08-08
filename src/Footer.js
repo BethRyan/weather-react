@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="Footer">
       Open-source code by{" "}
       <a
-        href="https://www.linkedin.com/in/elizabeth-waylett-6ab21274/"
+        href="https://www.linkedin.com/in/elizabeth-waylett-ryan-6ab21274/"
         target="_blank"
         className="footerLink"
         rel="noopener noreferrer"
@@ -19,7 +19,7 @@ export default function Footer() {
         className="footerLink"
         rel="noopener noreferrer"
       >
-        GitHub
+        GitHub{" "}
       </a>
       and hosted on{" "}
       <a

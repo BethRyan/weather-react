@@ -3,13 +3,10 @@
   text-align: center;
   border: solid 2px lightgray;
   border-radius: 15px;
-
   max-width: 600px;
   margin: 20px auto;
   box-shadow: rgba(62, 114, 139, 0.51) 0px 2px 4px 0;
   color: #8566aa;
-  /*text-shadow: rgba(62, 114, 139, 0.51) 2px 2px 3px;*/
-  /*background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);*/
   background-image: url(./images/abstractbackground.jpg);
   background-size: 100%;
 }
