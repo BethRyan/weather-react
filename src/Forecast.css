@@ -1,0 +1,21 @@
+.Forecast {
+  font-size: 20px;
+  color: #3b2e5a;
+}
+.Forecast canvas {
+  display: block;
+  margin: 6px auto;
+  size: 20px;
+}
+.Time {
+  font-size: 16px;
+}
+.Forecast .col {
+  padding: 0 6px;
+}
+.Forecast .row {
+  margin: 0 -28px 15px;
+}
+.Forecast h2 {
+  color: #8566aa;
+}

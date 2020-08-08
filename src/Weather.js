@@ -22,7 +22,7 @@ export default function Weather(props) {
           <Col id="current-icon-col">
             <div className="clearfix">
               <div className="float-left" id="current-icon">
-                <Icons code={icon} />
+                <Icons size={52} code={icon} />
               </div>
               <div className="float-left">
                 <CurrentTempurature
@@ -34,7 +34,7 @@ export default function Weather(props) {
           </Col>
           <Col id="current-stats-col">
             <ul id="list">
-              <li>Feels Like: {Math.round(temp)}°F | °C</li>
+              <li>Feels Like: {Math.round(temp)}°F</li>
               <li>Humidity: {humidity}%</li>
               <li>Wind: {Math.round(wind)}mph</li>
             </ul>
