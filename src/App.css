@@ -74,7 +74,11 @@ li {
   margin-top: 6px;
   margin-left: 18px;
 }
-#search-btn {
+#currentloc-button {
+  display: inline;
+}
+#search-btn,
+#currentloc-button {
   box-shadow: rgba(62, 114, 139, 0.51) 0px 2px 4px 0;
 
   font-size: 20px;
@@ -84,7 +88,8 @@ li {
   transition: all 200ms ease;
   margin-left: 20px;
 }
-#search-btn:hover {
+#search-btn:hover,
+#currentloc-button:hover {
   background: #8566aa;
   color: #fff1eb;
   cursor: pointer;
