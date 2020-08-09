@@ -38,13 +38,13 @@ export default function Weather(props) {
               <li>Feels Like: {Math.round(props.info.feelsLike)}°F</li>
               <li>Humidity: {humidity}%</li>
               <li>Wind: {Math.round(wind)}mph</li>
+              <li>
+                <div className="UpdatedTime">
+                  <Date date={props.info.date} />
+                </div>
+              </li>
             </ul>
           </Col>
-        </Row>
-        <Row>
-          <div className="UpdatedTime">
-            <Date date={props.info.date} />
-          </div>
         </Row>
       </Container>
     </div>

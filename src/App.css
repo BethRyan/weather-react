@@ -33,7 +33,7 @@ li {
 }
 .UpdatedTime {
   text-align: left;
-  margin-left: 20px;
+  margin-top: 15px;
   font-size: 15px;
 }
 .Weather #current-temp {
