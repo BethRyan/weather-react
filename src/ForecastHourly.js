@@ -24,7 +24,11 @@ export default function ForecastHourly(props) {
   return (
     <div className="Forecast">
       <span className="Time">{time()}</span>
-      <Icons size={40} code={props.forecast.weather[0].icon} />
+      <Icons
+        size={40}
+        code={props.forecast.weather[0].icon}
+        color={"#f5f5f5"}
+      />
       {temperature()}
     </div>
   );

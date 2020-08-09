@@ -17,10 +17,9 @@ export default function Forecast(props) {
   }
 
   if (loaded && city === forecast.city.name) {
-    console.log(forecast.list[0]);
     return (
       <div className="Forecast">
-        <hr className="my-3" />
+        {/*<hr className="my-3" />*/}
         <h2>Hourly Forecast:</h2>
         <Container className="Forecast">
           <Row>
